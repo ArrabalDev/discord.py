@@ -2,12 +2,6 @@
 
 async def drop(ctx, param1: str = None, param2: str = None):
 
-    allowed_user_id = "1099054245182963793"
-
-    if str(ctx.author.id) != allowed_user_id:
-        await ctx.reply("> Você não tem permissão para usar este comando.")
-        return
-
     if param1 is None or param2 is None:
         await ctx.send("**<:emoji_29:1249468115650088961> Parâmetro faltando!**\n> Use `Adrop [tipo] [quantidade]` (o tipo pode ser `Bronze`, `Prata`, `Ouro`, `Platina`, `Diamante`, `Esmeralda` ou `Safira`, e a quantidade deve ser um número maior que zero).")
         return
